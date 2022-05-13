@@ -1,0 +1,109 @@
+.container > section{
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: .5px solid var(--background-white-opacity);
+}
+.container > section h2{
+    font-size: var(--size3);
+}
+.container > section h3{
+    font-size: var(--size2);
+}
+
+
+main .tabs{
+    display: flex;
+    width: 100%;
+}
+
+main .tab-links{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+main .tab-links button{
+    font-size: var(--size2);
+    cursor: pointer;
+    color: var(--background-white);
+    background-color: transparent;
+    border: none;
+    padding: 1rem 0;
+    position: relative;
+}
+
+main .tab-links button::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--background-white);
+    transition: .3s;
+}
+
+main .tab-links button:hover::after,
+main .tab-links button:focus::after{
+    width: 100%;
+}
+
+main .tab-content{
+    width: 85%;
+}
+
+main .tab-content section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .tab-content section .box-response{
+    display: flex;
+    justify-content: space-between;
+}
+main .tab-content section h2{
+    font-size: var(--size3);
+    border: 1px solid #aaa;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+main .tab-content section fieldset{
+    margin: .5rem;
+}
+main .tab-content section legend{
+    font-size: var(--size2);
+    text-align: center;
+    padding: 0 1rem;
+}
+main .tab-content section p{
+    font-size: var(--size2);
+    padding: 2rem;
+}
+main .tab-content section input[type=range]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+main .tab-content section .box-correction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+
+}
+main .tab-content section .box-correction label{
+    font-size: var(--size2);
+}
+main .tab-content section .box-correction input.is-correct{
+    background-color: var(--background-white);
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 1rem 0;
+}

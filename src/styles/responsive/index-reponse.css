@@ -1,0 +1,24 @@
+@media (max-width: 500px) {
+    main h2 {
+        font-size: clamp(2rem, 3vw, 5rem);
+        color: var(--background-white);
+        width: 100%;
+        text-align: center;
+        padding: 4rem;
+    }
+    main div.matters {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main div.matters div.matter {
+        width: 14rem;
+        height: 20rem;
+    }
+    main .button-add-matter {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0;
+    }
+}

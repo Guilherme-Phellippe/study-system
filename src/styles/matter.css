@@ -1,0 +1,293 @@
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main .container-matter{
+    width: 70%;
+    display: flex;
+    padding: 5rem 1rem;
+}
+main .container-matter .info-matter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #111;
+    transition: .2s;
+}
+main .container-matter .info-matter:hover{
+    transform: scale(1.05);
+}
+main .container-matter .info-matter .container-img{
+    width: 80%;
+    height: 20rem;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+main .container-matter .info-matter .container-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main .container-matter .info-matter .container-img:hover img{
+    opacity: .6;
+}
+main .container-matter .info-matter .container-img:hover > span{
+    display: block;
+}
+main .container-matter .info-matter .container-img > span{
+    font-size: clamp(1rem, 1.3vw, 4rem);
+    cursor: pointer;
+    text-align: center;
+    display: none;
+}
+main .container-matter .info-matter .infos{
+    width: 100%;
+    height: 10rem;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    background-color: #11111180;
+}
+main .container-matter .info-matter .infos input{
+    font-size: clamp(2rem, 2vw, 4rem);
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: var(--background-white);
+    border: none;
+    outline: none;
+    padding: 1rem;
+}
+main .container-matter .info-matter .infos input:focus{
+    border: 1px solid #aaa;
+}
+main .container-matter .info-matter .infos .settings-matter{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+main .container-matter .info-matter .infos .settings-matter span{
+    font-size: clamp(1.2rem , .8vw, 4rem);
+    color: var(--background-white);
+    cursor: pointer;
+}
+main .container-matter .info-matter .infos .settings-matter span:hover{
+    text-decoration: underline;
+}
+
+main .container-matter .info-matter .container-img div#modal{
+    background-color: var(--background-white);
+    color: var(--background-black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    place-items: center;
+    padding: 5rem 0;
+}
+main .container-matter .info-matter div#modal span#close{
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: clamp(1.2rem, 1vw, 4rem);
+    padding: .6rem;
+    cursor: pointer;
+}
+main .container-matter .info-matter div#modal input{
+    width: 80%;
+    height: 3rem;
+    font-size: clamp(1rem, 1.3vw, 3rem);
+    margin: 0 auto;
+    text-align: center;
+}
+main .container-matter .info-matter div#modal p{
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
+main .container-matter .info-matter div#modal button {
+    padding: .2rem 1rem;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    cursor: pointer;
+    margin-top: 1rem;
+}
+main .container-matter .option-matter{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container-matter .option-matter button{
+    margin: 2rem 0;
+    font-size: clamp(1.5rem,2vw, 4rem);
+    width: 50%;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+main .container-matter .option-matter a{
+    font-size: clamp(1rem , 2vw, 3rem);
+}
+
+/* MODALS */
+
+.container-modals{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    place-items: center;
+    background-color: #24242480;
+}
+
+.container-modals .modal-delete{
+   width: 30%;
+   height: 20%;
+   background-color: var(--background-white);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.container-modals .modal-delete p{
+    color: var(--background-black);
+    font-size: clamp(1.5rem, 1vw, 3rem);
+    padding: 2rem 0;
+}
+.container-modals .modal-delete .box-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container-modals .modal-delete .box-buttons button{
+    width: 25%;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-size: clamp(1rem, .8vw, 3rem);
+}
+
+/* modal crear ask */
+.container-modals .modal-crear-ask{
+    width: 70%;
+    height: auto;
+    position: relative;
+    background-color: var(--background-black);
+    border: 1px solid #11111170;
+    box-shadow: 1px 1px 10px #00000080;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+}
+
+.container-modals .modal-crear-ask h3{
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem , 2vw, 4rem);
+}
+
+.container-modals .modal-crear-ask textarea{
+    font-size: clamp(1rem , 2vw, 4rem);
+    width: 100%;
+    resize: none;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.container-modals .modal-crear-ask button{
+    width: 50%;
+    margin: auto;
+    padding: .5rem 2rem;
+    font-size: clamp(1rem , 2vw, 4rem);
+    cursor: pointer;
+}
+
+/* modal fill table asks */
+.container-modals .modal-see-ask{
+    width: 70%;
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+    position: relative;
+    background-color: var(--background-black);
+    border: 1px solid #11111170;
+    box-shadow: 1px 1px 10px #00000080;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container-modals .modal-see-ask table{
+    width: 100%;
+    height: auto;
+}
+.container-modals .modal-see-ask table tr{
+    font-size: clamp(1rem, 2vw, 4rem);
+}
+.container-modals .modal-see-ask table tr:nth-of-type(2n+0){
+    background-color: #ffffff20;
+}
+.container-modals .modal-see-ask table td:not(td:first-of-type){
+    text-align: center;
+    width: 40%;
+    padding: 1rem 0;
+}
+
+.container-modals .modal-see-ask table td i.fa-trash{
+    font-size: clamp(1rem , 1.2vw, 3rem);
+    color: darkred;
+    cursor: pointer;
+}
+.container-modals .modal-see-ask table td i.fa-hammer{
+    font-size: clamp(1rem , 1vw, 3rem);
+    color: darkgray;
+    cursor: pointer;
+}
+.container-modals .modal-see-ask table td i:hover{
+    transform: scale(1.3);
+}
+
+/* modal new exam */
+.container-modals .modal-new-exam{
+    width: 30%;
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+    position: relative;
+    background-color: var(--background-black);
+    border: 1px solid #11111170;
+    box-shadow: 1px 1px 10px #00000080;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container-modals .modal-new-exam .box{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.container-modals .modal-new-exam label{
+    font-size: var(--size2);
+}
+.container-modals .modal-new-exam input{
+    font-size: var(--size2);
+    text-align: center;
+    margin-left: 1rem;
+}

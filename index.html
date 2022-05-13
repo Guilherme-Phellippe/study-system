@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study system</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/responsive/index-reponse.css">
+    <!-- SCRIPTS -->
+    <script src="./src/scripts/global.js" defer type="module"></script>
+    <script src="./src/scripts/index.js" defer type="module"></script>
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Study System</h1>
+            </div>
+            <input type="range" id="change-bg" min="1" max="2" value="1">
+        </header>
+        <main>
+            <h2>Escolha a materia que você deseja estudar:</h2>
+            <div class="matters">
+                <!-- div preenchida com script -->
+            </div>
+            <div class="button-add-matter">
+                <button>Nova materia</button>
+            </div>
+        </main>
+
+
+        <!-- MODALS! -->
+        <div class="container-modals new-matter">
+            <div class="modal-add-matter">
+                <span id="close-modal">X</span>
+                <h2>Insira uma nova materia</h2>
+                <form action="">
+                    <label for="name">Digite o nome da matéria</label>
+                    <input type="text" name="name" id="name" placeholder="Ex: Javascript">
+                    <label for="image">Imagem da matéria</label>
+                    <div class="choose">
+                        <input type="file">
+                        <p>ou</p>
+                        <input type="url" id="url-image" placeholder="Ex: imagem.png">
+                    </div>
+                </form>
+                <div class="div_button">
+                    <button>Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+:root{
+    --background-black: #242424 ;
+    --background-white: rgba(216, 216, 216, 0.973) ;
+    --background-white-opacity: rgba(216, 216, 216, 0.3) ;
+
+    --size1: clamp(1rem, 1vw, 4rem);
+    --size2: clamp(1.5rem, 1.5vw, 4rem);
+    --size3: clamp(1.8rem, 2.5vw, 5rem);
+    --size4: clamp(2rem, 3vw, 6rem);
+}
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-black);
+    color: var(--background-white);
+    display: grid;
+    place-items: center;
+}
+
+body.background-white{
+    background-color: var(--background-white);
+    color: var(--background-black);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    background-color: inherit;
+}
+.container header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    box-shadow: 0px 0px 10px #83838340;
+    backdrop-filter: blur(100px) brightness(95%) ;
+}
+body.background-white .container header{
+    border-bottom: .1rem solid #ffffff;
+    backdrop-filter: blur(100px) ;
+
+}
+.container header h1{
+    font-size: clamp(1rem, 2vw, 4rem);
+}
+
+.container header input[type=range]{
+    width: 3rem;
+    min-width: 25px;
+    cursor: pointer;
+}
+
+/* TAGS GLOBAIS*/
+
+.button{
+    padding: .7rem 2rem;
+    font-size: var(--size1);
+    background-color: rgb(58, 94, 194);
+    color: var(--background-white);
+    cursor: pointer;
+    border: none;
+    transition: filter .2s;
+}
+.button:hover{
+    filter: brightness(130%);
+}
+
+span#close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: clamp(1rem , 1.3vw, 3rem);
+    cursor: pointer;;
+}

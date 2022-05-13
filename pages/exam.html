@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- CSS! -->
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/exam.css">
+    <!-- SCRIPTS -->
+    <script src="./src/scripts/exam.js" defer type="module"></script>
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="logo">
+                <h1>Study System</h1>
+            </div>
+            <input type="range" id="change-bg" min="1" max="2" value="1">
+        </header>
+        <!-- main -->
+        <main>
+            <div class="container-exam">
+                <div class="info-exam">
+                    <h2 id="name-matter"></h2>
+                    <span id="time">00:00</span>
+                    <span id="nivel">Nivel: 0</span>
+                    <span id="qntd-ask"></span>
+                </div>
+                <div class="box-exam">
+                    <div class="box-question">
+                        <span id="number-question"></span>
+                        <p id="current-ask"></p>
+                    </div>
+                    <hr>
+                    <textarea id="your-answer" cols="30" rows="10" placeholder="Digite sua resposta"></textarea>
+                    <button class="button">Próximo</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

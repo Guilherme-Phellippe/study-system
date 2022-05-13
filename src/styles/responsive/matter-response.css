@@ -1,0 +1,49 @@
+@media (max-width: 500px) {
+    main .container-matter {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 5rem 1rem;
+    }
+
+    main .container-matter .info-matter {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    main .container-matter .option-matter button {
+        margin: 1rem 0;
+        font-size: clamp(1.5rem, 2vw, 4rem);
+        width: 80%;
+        height: 4rem;
+        cursor: pointer;
+    }
+
+    main .container-matter .option-matter a {
+        font-size: clamp(1rem, 7rem, 3rem);
+    }
+
+    /* modals  */
+    .container-modals .modal-delete {
+        width: 70%;
+    }
+
+    /* modal crear ask */
+    .container-modals .modal-crear-ask {
+        width: 95%;
+        min-height: 70vh;
+    }
+
+    /* modal fill table asks */
+    .container-modals .modal-see-ask {
+        width: 100%;
+
+    }
+
+    /* modal new exam */
+    .container-modals .modal-new-exam {
+        width: 80%;
+
+    }
+}

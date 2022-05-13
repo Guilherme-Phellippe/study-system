@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="" type="image/x-icon" id="favicon">
+    <!-- SCRIPTS -->
+    <script src="./src/scripts/global.js" defer type="module"></script>
+    <script src="./src/scripts/matter.js" defer type="module"></script>
+    <!-- CSS! -->
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/matter.css">
+    <link rel="stylesheet" href="./src/styles/responsive/matter-response.css">
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="logo">
+                <h1>Study System</h1>
+            </div>
+            <input type="range" id="change-bg" min="1" max="2" value="1">
+        </header>
+        <!-- main -->
+        <main>
+            <div class="container-matter">
+                <div class="info-matter">
+                    <div class="container-img">
+                        <img src="" alt="">
+                        <span id="change-img">Alterar imagem</span>
+                        <!-- MODAL! -->
+                        <div id="modal">
+                            <span id="close">X</span>
+                            <input type="file">
+                            <p>ou</p>
+                            <input type="url" id="url-image" placeholder="Ex: imagem.png">
+                            <button>salvar</button>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <input type="text" value="matter" id="name-matter" disabled>
+                        <div class="settings-matter">
+                            <span id="edit-link">Editar</span>
+                            <span id="del-link">Excluir</span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="option-matter">
+                    <button id="crear-exam">Fazer prova</button>
+                    <button id="crear-ask">Criar Perguntas</button>
+                    <button id="see-ask">Ver perguntas</button>
+                    <a href="/">voltar</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODALS -->
+    <div class="container-modals container-delete">
+        <div class="modal-delete">
+            <p>Deseja realmente excluir essa materia?</p>
+            <div class="box-buttons">
+                <button id="cancel">Cancelar</button>
+                <button id="delete">Excluir</button>
+            </div>
+        </div>
+    </div>
+    <!-- modal crear ask -->
+    <div class="container-modals container-crear-ask">
+        <div class="modal-crear-ask">
+            <span id="close">X</span>
+            <div class="ask">
+                <h3>Pergunta</h3>
+                <textarea id="ask" cols="30" rows="5"></textarea>
+            </div>
+            <div class="answer">
+                <h3>Resposta</h3>
+                <textarea id="answer" cols="30" rows="5"></textarea>
+            </div>
+            <button>salvar</button>
+        </div>
+    </div>
+    <!-- modal see all asks -->
+    <div class="container-modals container-see-ask">
+        <div class="modal-see-ask">
+            <span id="close">X</span>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>Pergunta</th>
+                    <th>Resposta</th>
+                    <th>nivel</th>
+                    <th>Ações</th>
+                </tr>
+                <tbody id="tbody-see-ask">
+    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- modal new exam -->
+    <div class="container-modals container-new-exam">
+        <div class="modal-new-exam">
+            <span id="close">X</span>
+            <div class="box">
+                <label for="qntdQuestions">Quantidade de perguntas:</label>
+                <input type="number" id="qntd-questions" value="10" min="5">
+            </div>
+            <hr>
+            <div class="box">
+                <label for="metodoExam">Prova flashcard:</label>
+                <input type="checkbox" name="metodoExam" id="metodoExam">
+            </div>
+            <button class="button">Criar</button>
+        </div>
+    </div>
+</body>
+
+</html>

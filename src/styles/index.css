@@ -1,0 +1,178 @@
+body{
+    overflow-x: hidden;
+}
+
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+main h2{
+    font-size: clamp(2rem, 3vw, 5rem);
+    color: var(--background-white);
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+main div.matters{
+    width: 80%;
+    height: auto;
+    margin: 0 auto 5rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main div.matters div.matter{
+    width: 16rem;
+    height: 22rem;
+    min-height: 150px;
+    max-height: 250px;
+    cursor: pointer;
+    border: 1px solid #24242450;
+    padding: .2rem;
+    margin: 1rem 2rem;
+    transition: .2s;
+}
+
+main div.matters > div.matter:hover{
+    box-shadow: 1px 1px 10px #aaaaaa50;
+    transform: scale(1.02);
+}
+
+main div.matters div.matter .container-img{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+main div.matters div.matter .container-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main div.matters div.matter h3{
+    font-size: clamp(1.5rem, 1.5vw, 4rem);
+    text-transform: uppercase;
+    width: 100%;
+    height: 30%;
+    padding: 1rem;
+    text-align: center;
+}
+main div.matters div.matter .container-status{
+    width: 95%;
+    justify-self: flex-end;
+}
+main div.matters div.matter p{
+    font-size: clamp(1.5rem, 1.5vw, 4rem);
+    width: 100%;
+    padding: .1rem;
+}
+main div.matters div.matter p span{
+    font-size: inherit;
+}
+
+main div.matters div.matter progress{
+    width: 100%;
+    height: 2rem;
+    margin: auto;
+}
+main .button-add-matter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+main button{
+    font-size: clamp(2rem ,1.5vw, 4rem);
+    cursor: pointer;
+    padding: .7rem 2rem;
+}
+
+
+/* MODALS */
+
+.container-modals{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #24242460;
+    display: grid;
+    place-items: center;
+    color: var(--background-black);
+    display: none;
+}
+
+.container-modals .modal-add-matter{
+    width: 40rem;
+    height: auto;
+    background-color: var(--background-white);
+    position: relative;
+}
+.container-modals .modal-add-matter > span#close-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: clamp(1.5rem , 1.8vw, 4rem);
+    padding: .2rem;
+    cursor: pointer;
+}
+.container-modals .modal-add-matter h2{
+    font-size: clamp(1.5rem , 1.8vw, 4rem);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.container-modals .modal-add-matter form{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.container-modals .modal-add-matter label{
+    font-size: clamp(1rem, 1.3vw, 3rem);
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.container-modals .modal-add-matter input{
+    width: 80%;
+    height: 3rem;
+    font-size: clamp(1rem, 1.3vw, 3rem);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-modals .modal-add-matter .choose{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    border: 1px solid #24242440;
+    padding: 2rem;
+}
+.container-modals .modal-add-matter .choose p{
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    padding: 1rem;
+}
+
+.container-modals .modal-add-matter .div_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.container-modals .modal-add-matter button{
+    padding: .7rem 2rem;
+    font-size: clamp(1rem, 1vw, 4rem);
+    cursor: pointer;
+}
