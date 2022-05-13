@@ -74,7 +74,7 @@ function editBoxInfo(){
         modal.style.display = 'grid';
         buttonDelModal.addEventListener('click' , async ()=>{
             await deleteMatter(params.get('matterid'));
-            window.location.href = '/'
+            window.location.href = `/study-system/pages/`
         });
         buttonCancelModal.addEventListener('click' , ()=>{
             modal.style.display = 'none';

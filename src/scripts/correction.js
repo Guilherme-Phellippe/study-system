@@ -18,6 +18,6 @@ function saveExam(){
     let button = document.querySelector('.container > section button.button');
     button.addEventListener('click' , ()=>{
         localStorage.removeItem('answers')
-        window.location.href= '/'
+        window.location.href = `/study-system/pages/`
     }) 
 }

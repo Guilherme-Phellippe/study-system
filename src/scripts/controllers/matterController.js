@@ -62,6 +62,6 @@ export function createTheExam(max){
     buttonCrear.addEventListener('click', ()=>{
         var qntd =  document.querySelector('.container-modals .modal-new-exam input[type=number]').value;
         var isFlashCard = false;
-        window.location.href = `/pages/exam.html?id=267eh23g42343274curh&matterid=${params.get('matterid')}&qntd=${qntd}&max=${max}&fc=${isFlashCard}`
+        window.location.href = `/study-system/pages/exam.html?id=267eh23g42343274curh&matterid=${params.get('matterid')}&qntd=${qntd}&max=${max}&fc=${isFlashCard}`
     });
 }

@@ -42,7 +42,7 @@ function redirectMatterPage(){
         const id = e.target.closest('div.matter').attributes.value.value
         const name = e.target.closest('div.matter').querySelector('h3').textContent
         const img = e.target.closest('div.matter').querySelector('img').src
-        window.location.href = `/matter.html?i=${img}&id=kjbhdskha15380lkdnfhagsd36hbchsdjksdh3439kn4&matterid=${id}&name=${name}`
+        window.location.href = `/study-system/pages/matter.html?i=${img}&id=kjbhdskha15380lkdnfhagsd36hbchsdjksdh3439kn4&matterid=${id}&name=${name}`
     }))
 }
 
